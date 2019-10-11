@@ -8,8 +8,9 @@ using Microsoft.EntityFrameworkCore;
 namespace Advantage.API.Controllers
 {
 
-    // [Route("[controller]")]
-    [Route("api/[controller]")]
+    [ApiController]
+    [Route("[controller]")]
+    // [Route("api/[controller]")]
     public class OrderController : ControllerBase
     {
         private readonly ApiContext _ctx;
@@ -69,7 +70,7 @@ namespace Advantage.API.Controllers
             return Ok(groupedResult);
         }
 
-        [HttpGet("GetOrder/{}", Name = "GetOrder")]
+        [HttpGet("GetOrder/{id}", Name = "GetOrder")]
         public IActionResult GetOrder(int id)
         {
             var order = _ctx.Orders.Include(o => o.Customer).First(o => o.Id == id);

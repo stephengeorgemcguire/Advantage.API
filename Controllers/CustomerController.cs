@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Advantage.API.Controllers
 {
+    // [ApiController]
     [ApiController]
     [Route("[controller]")]
     // [Route("api/[controller]")]
