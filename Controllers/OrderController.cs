@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using Advantage.API.Models;
+using Advantage.API;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
